@@ -1,0 +1,224 @@
+schema_version: 1
+assets:
+  - asset_id: obj.cuboid_grasp_v1
+    kind: object
+    path: assets/objects/cuboid_grasp_v1.xml
+    functional_family: grasp_target
+    physical_identity: cuboid_grasp_060x036x044_v1
+    visual_equivalence_group: cuboid_grasp_060x036x044_visual_v1
+    symmetry:
+      type: finite
+      quaternions_xyzw:
+        - [0, 0, 0, 1]
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
+    grasp_class: parallel_jaw
+  - asset_id: obj.asym_t_t1_v1
+    kind: object
+    path: assets/objects/asym_t_t1_v1.xml
+    functional_family: grasp_target
+    physical_identity: asym_t_t1_bar080x040x036_stem024x050x036_v1
+    visual_equivalence_group: asym_t_t1_bar080x040x036_stem024x050x036_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: parallel_jaw
+  - asset_id: arena.conveyor_v1
+    kind: arena
+    path: assets/arenas/conveyor_v1.xml
+    functional_family: conveyor_support
+    physical_identity: conveyor_surface_560x800x040_v1
+    visual_equivalence_group: conveyor_surface_560x800x040_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: obj.cube_44_v1
+    kind: object
+    path: assets/objects/cube_44_v1.xml
+    functional_family: driven_target
+    physical_identity: cube_044_v1
+    visual_equivalence_group: cube_044_visual_v1
+    symmetry:
+      type: finite
+      quaternions_xyzw:
+        - [0,0,0,1]
+        - [1,0,0,0]
+        - [0,1,0,0]
+        - [0,0,1,0]
+        - [-0.7071067811865476,0,0,0.7071067811865476]
+        - [0.7071067811865476,0,0,0.7071067811865476]
+        - [0,-0.7071067811865476,0,0.7071067811865476]
+        - [0,0.7071067811865476,0,0.7071067811865476]
+        - [0,0,-0.7071067811865476,0.7071067811865476]
+        - [0,0,0.7071067811865476,0.7071067811865476]
+        - [-0.5,-0.5,-0.5,0.5]
+        - [-0.5,-0.5,0.5,0.5]
+        - [-0.5,0.5,-0.5,0.5]
+        - [-0.5,0.5,0.5,0.5]
+        - [0.5,-0.5,-0.5,0.5]
+        - [0.5,-0.5,0.5,0.5]
+        - [0.5,0.5,-0.5,0.5]
+        - [0.5,0.5,0.5,0.5]
+        - [0.7071067811865476,-0.7071067811865476,0,0]
+        - [0.7071067811865476,0.7071067811865476,0,0]
+        - [0.7071067811865476,0,-0.7071067811865476,0]
+        - [0.7071067811865476,0,0.7071067811865476,0]
+        - [0,0.7071067811865476,-0.7071067811865476,0]
+        - [0,0.7071067811865476,0.7071067811865476,0]
+    grasp_class: parallel_jaw
+  - asset_id: obj.cuboid_t2_handle_v1
+    kind: object
+    path: assets/objects/cuboid_t2_handle_v1.xml
+    functional_family: placement_payload
+    physical_identity: cuboid_t2_044x044x044_top_handle016x016x060_v1
+    visual_equivalence_group: cuboid_t2_top_handle_visual_v1
+    symmetry:
+      type: finite
+      quaternions_xyzw:
+        - [0, 0, 0, 1]
+        - [0, 0, 0.7071067811865476, 0.7071067811865476]
+        - [0, 0, 1, 0]
+        - [0, 0, -0.7071067811865476, 0.7071067811865476]
+    grasp_class: handle
+  - asset_id: obj.asym_t_t2_handle_v1
+    kind: object
+    path: assets/objects/asym_t_t2_handle_v1.xml
+    functional_family: placement_payload
+    physical_identity: asym_t_t2_bar060x024x036_stem024x030x036_handle016x016x060_v1
+    visual_equivalence_group: asym_t_t2_handle_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: handle
+  - asset_id: fixture.open_tray_v1
+    kind: fixture
+    path: assets/arenas/open_tray_v1.xml
+    functional_family: placement_receptacle
+    physical_identity: open_tray_cuboid_body_clearance008_wall_height050_v1
+    visual_equivalence_group: open_tray_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: fixture.t_slot_v1
+    kind: fixture
+    path: assets/arenas/t_slot_v1.xml
+    functional_family: placement_receptacle
+    physical_identity: t_slot_t_body_clearance004_wall_height040_v1
+    visual_equivalence_group: t_slot_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: fixture.occlusion_canopy_v1
+    kind: fixture
+    path: assets/arenas/occlusion_canopy_v1.xml
+    functional_family: occlusion_canopy
+    physical_identity: occlusion_canopy_240x072x012_far_post_v1
+    visual_equivalence_group: occlusion_canopy_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: arena.rotating_wire_v1
+    kind: arena
+    path: assets/arenas/rotating_wire_v1.xml
+    functional_family: rotating_interaction_support
+    physical_identity: table_with_buzz_wire_support_v1
+    visual_equivalence_group: table_with_buzz_wire_support_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: obj.wand_loop_v1
+    kind: object
+    path: assets/objects/wand_loop_v1.xml
+    functional_family: rotating_interaction_wand
+    physical_identity: wand_ring_r034_tube003_handle044x024x120_v1
+    visual_equivalence_group: wand_ring_redwood_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: handle
+  - asset_id: fixture.rotating_wire_v1
+    kind: fixture
+    path: assets/arenas/rotating_wire_fixture_v1.xml
+    functional_family: rotating_interaction_wire
+    physical_identity: rotating_wire_13point_r004_xspan300_v1
+    visual_equivalence_group: rotating_wire_13point_r004_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: fixture.wand_cradle_v1
+    kind: fixture
+    path: assets/arenas/wand_cradle_v1.xml
+    functional_family: rotating_interaction_cradle
+    physical_identity: wand_gravity_cradle_v1
+    visual_equivalence_group: wand_gravity_cradle_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: arena.unsupported_ramp_v1
+    kind: arena
+    path: assets/arenas/unsupported_ramp_v1.xml
+    functional_family: free_dynamics_interception_support
+    physical_identity: unsupported_ramp_gate_tray_v1
+    visual_equivalence_group: unsupported_ramp_gate_tray_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: arena.supported_ramp_v1
+    kind: arena
+    path: assets/arenas/supported_ramp_v1.xml
+    functional_family: free_dynamics_interception_support
+    physical_identity: supported_ramp_gate_table_v1
+    visual_equivalence_group: supported_ramp_gate_table_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: obj.sphere_r030_v1
+    kind: object
+    path: assets/objects/sphere_r030_v1.xml
+    functional_family: free_dynamics_interception_target
+    physical_identity: sphere_r030_v1
+    visual_equivalence_group: sphere_r030_visual_v1
+    symmetry:
+      type: spherical
+    grasp_class: parallel_jaw
+  - asset_id: obj.slider_v1
+    kind: object
+    path: assets/objects/slider_v1.xml
+    functional_family: free_dynamics_interception_target
+    physical_identity: slider_050x070x040_v1
+    visual_equivalence_group: slider_050x070x040_visual_v1
+    symmetry:
+      type: finite
+      quaternions_xyzw:
+        - [0, 0, 0, 1]
+        - [1, 0, 0, 0]
+        - [0, 1, 0, 0]
+        - [0, 0, 1, 0]
+    grasp_class: parallel_jaw
+  - asset_id: obj.can_v1
+    kind: object
+    path: assets/objects/can_v1.xml
+    functional_family: free_dynamics_interception_target
+    physical_identity: can_r024_h090_v1
+    visual_equivalence_group: can_r024_h090_visual_v1
+    symmetry:
+      type: axial
+      axis_local: [0, 0, 1]
+      bidirectional: true
+    grasp_class: parallel_jaw
+  - asset_id: arena.replanning_conveyor_v1
+    kind: arena
+    path: assets/arenas/replanning_conveyor_v1.xml
+    functional_family: replanning_support
+    physical_identity: replanning_conveyor_560x800x040_dual_striker_v1
+    visual_equivalence_group: replanning_conveyor_dual_striker_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: none
+  - asset_id: obj.keyed_puck_v1
+    kind: object
+    path: assets/objects/keyed_puck_v1.xml
+    functional_family: replanning_target
+    physical_identity: keyed_puck_bar072x028x024_key024x048x024_v1
+    visual_equivalence_group: keyed_puck_visual_v1
+    symmetry:
+      type: identity
+    grasp_class: parallel_jaw

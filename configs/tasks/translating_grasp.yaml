@@ -1,0 +1,23 @@
+schema_version: 1
+variant: matched_xyz
+bindings:
+  target_object_id: target
+  driver_entity_id: target
+  occluder_fixture_ids: []
+allowed_observation_profiles:
+  - agentview
+  - agentview_wrist
+allowed_action_modes:
+  - E7
+  - J8
+episode_horizon_steps: 160
+success:
+  bilateral_contact_duration_s: 0.05
+  minimum_lift_or_clearance_m: 0.05
+  stable_hold_duration_s: 0.50
+metrics:
+  - success_rate
+  - task_completion
+  - completion_time_s
+  - safety_failure_rate
+  - failure_rate

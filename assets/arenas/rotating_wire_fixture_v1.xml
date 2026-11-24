@@ -1,0 +1,43 @@
+<mujoco model="rotating_wire_fixture_v1">
+  <compiler angle="radian" inertiagrouprange="0 0" />
+  <asset />
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom name="rotor_hub_visual" type="cylinder" size="0.026 0.022" rgba="0.34 0.37 0.4 1" group="1" contype="0" conaffinity="0" pos="0 0 0" quat="0.7071067812 -0 0.7071067812 0" />
+        <geom name="rotor_phase_marker_visual" type="capsule" size="0.004" rgba="0.92 0.18 0.1 1" group="1" contype="0" conaffinity="0" fromto="0.24 0 0.01872 0.24 0 0.0455" />
+        <geom name="segment_00" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="-0.15 0 0 -0.125 0 0" friction="0.8 0.005 0.0001" />
+        <geom name="segment_00_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="-0.15 0 0 -0.125 0 0" />
+        <geom name="segment_01" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="-0.125 0 0 -0.1 0 0.038" friction="0.8 0.005 0.0001" />
+        <geom name="segment_01_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="-0.125 0 0 -0.1 0 0.038" />
+        <geom name="segment_02" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="-0.1 0 0.038 -0.075 0 0.01" friction="0.8 0.005 0.0001" />
+        <geom name="segment_02_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="-0.1 0 0.038 -0.075 0 0.01" />
+        <geom name="segment_03" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="-0.075 0 0.01 -0.05 0 -0.025" friction="0.8 0.005 0.0001" />
+        <geom name="segment_03_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="-0.075 0 0.01 -0.05 0 -0.025" />
+        <geom name="segment_04" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="-0.05 0 -0.025 -0.025 0 -0.04" friction="0.8 0.005 0.0001" />
+        <geom name="segment_04_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="-0.05 0 -0.025 -0.025 0 -0.04" />
+        <geom name="segment_05" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="-0.025 0 -0.04 0 0 0" friction="0.8 0.005 0.0001" />
+        <geom name="segment_05_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="-0.025 0 -0.04 0 0 0" />
+        <geom name="segment_06" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="0 0 0 0.025 0 0.035" friction="0.8 0.005 0.0001" />
+        <geom name="segment_06_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="0 0 0 0.025 0 0.035" />
+        <geom name="segment_07" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="0.025 0 0.035 0.05 0 0.045" friction="0.8 0.005 0.0001" />
+        <geom name="segment_07_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="0.025 0 0.035 0.05 0 0.045" />
+        <geom name="segment_08" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="0.05 0 0.045 0.075 0 0.005" friction="0.8 0.005 0.0001" />
+        <geom name="segment_08_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="0.05 0 0.045 0.075 0 0.005" />
+        <geom name="segment_09" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="0.075 0 0.005 0.1 0 -0.035" friction="0.8 0.005 0.0001" />
+        <geom name="segment_09_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="0.075 0 0.005 0.1 0 -0.035" />
+        <geom name="segment_10" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="0.1 0 -0.035 0.125 0 0" friction="0.8 0.005 0.0001" />
+        <geom name="segment_10_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="0.1 0 -0.035 0.125 0 0" />
+        <geom name="segment_11" type="capsule" size="0.004" rgba="0 0 0 0" group="0" contype="1" conaffinity="1" fromto="0.125 0 0 0.15 0 0" friction="0.8 0.005 0.0001" />
+        <geom name="segment_11_visual" type="capsule" size="0.00488" rgba="0.93 0.63 0.12 1" group="1" contype="0" conaffinity="0" fromto="0.125 0 0 0.15 0 0" />
+        <geom name="connector_start_visual" type="capsule" size="0.00854" rgba="0.34 0.37 0.4 1" group="1" contype="0" conaffinity="0" fromto="-0.15 0 0 -0.24 -0 -0" />
+        <geom name="connector_finish_visual" type="capsule" size="0.00854" rgba="0.34 0.37 0.4 1" group="1" contype="0" conaffinity="0" fromto="0.15 0 0 0.24 0 0" />
+        <geom name="start_collar_visual" type="sphere" size="0.008" rgba="0.34 0.37 0.4 1" group="1" contype="0" conaffinity="0" pos="-0.15 0 0" />
+        <geom name="finish_collar_visual" type="sphere" size="0.008" rgba="0.34 0.37 0.4 1" group="1" contype="0" conaffinity="0" pos="0.15 0 0" />
+      </body>
+      <site name="bottom_site" pos="0 0 -0.05" size="0.001" rgba="0 0 0 0" />
+      <site name="top_site" pos="0 0 0.05" size="0.001" rgba="0 0 0 0" />
+      <site name="horizontal_radius_site" pos="0.285 0 0" size="0.001" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

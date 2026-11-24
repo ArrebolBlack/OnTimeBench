@@ -1,0 +1,27 @@
+schema_version: 1
+variant: single_side_strike
+bindings:
+  target_object_id: target
+  belt_fixture_id: belt
+  left_striker_fixture_id: left_striker
+  right_striker_fixture_id: right_striker
+allowed_observation_profiles:
+  - agentview
+  - agentview_wrist
+allowed_action_modes:
+  - E7
+  - J8
+episode_horizon_steps: 120
+success:
+  require_exactly_one_selected_impact: true
+  require_contact_after_impact: true
+  maximum_grasp_axis_error_deg: 18.0
+  bilateral_contact_duration_s: 0.05
+  minimum_lift_or_clearance_m: 0.05
+  stable_hold_duration_s: 0.50
+metrics:
+  - success_rate
+  - task_completion
+  - completion_time_s
+  - safety_failure_rate
+  - failure_rate

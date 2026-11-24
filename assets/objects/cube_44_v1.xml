@@ -1,0 +1,17 @@
+<mujoco model="cube_44_v1">
+  <asset>
+    <texture type="cube" name="cube_redwood" file="../textures/red-wood.png" />
+    <material name="cube_redwood_mat" texture="cube_redwood" texrepeat="1 1" specular="0.4" shininess="0.1" />
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom name="collision" type="box" pos="0 0 0" size="0.022 0.022 0.022" group="0" contype="1" conaffinity="1" condim="3" density="700" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" rgba="0.5 0 0 1" />
+        <geom name="canonical_visual" type="box" pos="0 0 0" size="0.022 0.022 0.022" group="1" contype="0" conaffinity="0" mass="1e-8" material="cube_redwood_mat" />
+      </body>
+      <site name="bottom_site" pos="0 0 -0.022" size="0.001" rgba="0 0 0 0" />
+      <site name="top_site" pos="0 0 0.022" size="0.001" rgba="0 0 0 0" />
+      <site name="horizontal_radius_site" pos="0.022 0.022 0" size="0.001" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

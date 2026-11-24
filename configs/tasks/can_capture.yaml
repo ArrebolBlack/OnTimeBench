@@ -1,0 +1,27 @@
+schema_version: 1
+variant: supported_can
+bindings:
+  target_object_id: target
+  ramp_fixture_id: ramp
+  release_gate_fixture_id: gate
+  downstream_surface_fixture_id: table
+allowed_observation_profiles:
+  - agentview
+  - agentview_wrist
+allowed_action_modes:
+  - E7
+  - J8
+episode_horizon_steps: 120
+success:
+  require_supported_contact: true
+  minimum_contact_speed_m_s: 0.08
+  require_transverse_closing_axis: false
+  bilateral_contact_duration_s: 0.05
+  minimum_lift_or_clearance_m: 0.05
+  stable_hold_duration_s: 0.50
+metrics:
+  - success_rate
+  - task_completion
+  - completion_time_s
+  - safety_failure_rate
+  - failure_rate

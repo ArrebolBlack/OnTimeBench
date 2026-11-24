@@ -1,0 +1,24 @@
+schema_version: 1
+variant: translation
+bindings:
+  payload_object_id: payload
+  goal_fixture_id: goal
+allowed_observation_profiles:
+  - agentview
+  - agentview_wrist
+allowed_action_modes:
+  - E7
+  - J8
+episode_horizon_steps: 200
+success:
+  minimum_insertion_depth_m: 0.025
+  planar_overlap_tolerance_m: 0.001
+  placement_hold_duration_s: 0.30
+  maximum_held_rim_force_n: 33.0
+  held_rim_force_window_s: 0.10
+metrics:
+  - success_rate
+  - task_completion
+  - completion_time_s
+  - safety_failure_rate
+  - failure_rate

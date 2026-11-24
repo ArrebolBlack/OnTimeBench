@@ -1,0 +1,21 @@
+<mujoco model="open_tray_v1">
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom friction="1.0 0.005 0.0001" priority="1" solref="0.004 1.0" solimp="0.95 0.99 0.001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.046 0.046 0.005" pos="0.0 0.0 0.0" group="0" name="floor_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.96 0.47 0.07 1.0" type="box" size="0.046 0.046 0.005" pos="0.0 0.0 0.0" group="1" name="floor_visual" />
+        <geom friction="1.0 0.005 0.0001" priority="1" solref="0.004 1.0" solimp="0.95 0.99 0.001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.008 0.046 0.025" pos="-0.038 0.0 0.030000000000000002" group="0" name="left_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.96 0.47 0.07 1.0" type="box" size="0.008 0.046 0.025" pos="-0.038 0.0 0.030000000000000002" group="1" name="left_visual" />
+        <geom friction="1.0 0.005 0.0001" priority="1" solref="0.004 1.0" solimp="0.95 0.99 0.001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.008 0.046 0.025" pos="0.038 0.0 0.030000000000000002" group="0" name="right_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.96 0.47 0.07 1.0" type="box" size="0.008 0.046 0.025" pos="0.038 0.0 0.030000000000000002" group="1" name="right_visual" />
+        <geom friction="1.0 0.005 0.0001" priority="1" solref="0.004 1.0" solimp="0.95 0.99 0.001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.03 0.008 0.025" pos="0.0 -0.038 0.030000000000000002" group="0" name="near_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.96 0.47 0.07 1.0" type="box" size="0.03 0.008 0.025" pos="0.0 -0.038 0.030000000000000002" group="1" name="near_visual" />
+        <geom friction="1.0 0.005 0.0001" priority="1" solref="0.004 1.0" solimp="0.95 0.99 0.001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.03 0.008 0.025" pos="0.0 0.038 0.030000000000000002" group="0" name="far_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.96 0.47 0.07 1.0" type="box" size="0.03 0.008 0.025" pos="0.0 0.038 0.030000000000000002" group="1" name="far_visual" />
+      </body>
+      <site name="bottom_site" pos="0 0 -0.005" size=".001" rgba="0 0 0 0" />
+      <site name="top_site" pos="0 0 0.055" size=".001" rgba="0 0 0 0" />
+      <site name="horizontal_radius_site" pos="0.06505382386916238 0.046 0" size=".001" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

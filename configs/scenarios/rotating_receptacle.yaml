@@ -1,0 +1,77 @@
+action_mode: E7
+observation_profile: agentview
+physics_timestep_s: 0.002
+control_frequency_hz: 20
+sensor_frequency_hz: 20
+robot_initial_state:
+  joint_position_rad: [0, 0.19634954084936207, 0, -2.617993877991494, 0, 2.941592653589793, 0.7853981633974483]
+  gripper_position_m: [0.020833, -0.020833]
+object_states:
+- instance_id: payload
+  asset_id: obj.asym_t_t2_handle_v1
+  position_world_m: [-0.10276829389898158, 0.0, 0.9630438715851881]
+  quaternion_world_xyzw: [0.0, 0.0, -0.7071067811865475, 0.7071067811865476]
+  linear_velocity_world_m_s: [0, 0, 0]
+  angular_velocity_world_rad_s: [0, 0, 0]
+fixture_states:
+- instance_id: goal
+  asset_id: fixture.t_slot_v1
+  position_world_m:
+  - {min: -0.13, max: -0.08}
+  - {min: -0.18, max: -0.12}
+  - 0.804
+  quaternion_world_xyzw:
+    yaw_rad: {min: -0.3, max: 0.3}
+geometry: {support_surface_z_m: 0.8, goal_planar_clearance_m: 0.004, goal_bottom_center_z_m: 0.804, goal_window_exit_y_m: 0.3}
+motion:
+- entity_id: goal
+  translation:
+    type: constant_velocity
+    velocity_world_m_s:
+    - 0
+    - {min: 0.03, max: 0.06}
+    - 0
+  rotation:
+    type: constant_angular_velocity
+    axis_world: [0, 0, 1]
+    angular_speed_rad_s: {min: -0.25, max: 0.25}
+physics:
+  gravity_world_m_s2: [0, 0, -9.81]
+  bodies:
+  - entity_id: payload
+    mass_kg: 0.06518399999999999
+    diagonal_inertia_kg_m2: [4.266790103092782e-05, 4.262441549986657e-05, 2.401686153106125e-05]
+  - entity_id: goal
+    mass_kg: 0.25433599999999995
+    diagonal_inertia_kg_m2: [0.0004236430725509357, 0.0002841249243462294, 0.0002456630795638315]
+  contacts:
+  - entity_id: payload
+    friction_slide_spin_roll: [1, 0.005, 0.0001]
+    solref: [0.02, 1]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2]
+  - entity_id: goal
+    friction_slide_spin_roll: [1, 0.005, 0.0001]
+    solref: [0.004, 1]
+    solimp: [0.95, 0.99, 0.001, 0.5, 2]
+  joints: []
+cameras:
+  image_height_px: 224
+  image_width_px: 224
+  views:
+  - view_name: agentview
+    position_parent_m: [0.68, -0.58, 1.62]
+    quaternion_parent_xyzw: [0.38402708798262114, 0.178438700438381, 0.38173834046499744, 0.8215586803755892]
+    vertical_fov_deg: 40
+lighting:
+  lights:
+  - light_id: conveyor_key
+    position_world_m: [1, 1, 1.5]
+    direction_world: [-0.19245008972987526, -0.19245008972987526, -0.9622504486493763]
+    ambient_rgb: [0, 0, 0]
+    diffuse_rgb: [0.7, 0.7, 0.7]
+    specular_rgb: [0.3, 0.3, 0.3]
+    attenuation: [1, 0, 0]
+    cutoff_deg: 45
+    active: true
+events: []
+action_delay: {enabled: false, delay_steps: 0}

@@ -1,0 +1,116 @@
+action_mode: E7
+observation_profile: agentview
+physics_timestep_s: 0.002
+control_frequency_hz: 20
+sensor_frequency_hz: 20
+action_delay: {enabled: false, delay_steps: 0}
+robot_initial_state:
+  joint_position_rad: [0, 0.19634954084936207, 0, -2.617993877991494, 0, 2.941592653589793, 0.7853981633974483]
+  gripper_position_m: [0.020833, -0.020833]
+object_states:
+- instance_id: target
+  asset_id: obj.can_v1
+  position_world_m:
+    ramp_center_offset_m:
+    - {min: -0.01, max: 0.01}
+    - {from_release_gate: true}
+    - 0.028
+  quaternion_world_xyzw:
+    axis_yaw_rad:
+      degrees: {min: -4.0, max: 4.0}
+  linear_velocity_world_m_s: [0.0, 0.0, 0.0]
+  angular_velocity_world_rad_s: [0.0, 0.0, 0.0]
+fixture_states:
+- instance_id: ramp
+  asset_id: arena.supported_ramp_v1
+  position_world_m: [0, -0.06, 0.808]
+  quaternion_world_xyzw: [0.0, 0.0, 0.0, 1.0]
+- instance_id: gate
+  asset_id: arena.supported_ramp_v1
+  position_world_m:
+    ramp_center_offset_m: [0.0, -0.09, 0.03900000000000001]
+  quaternion_world_xyzw: [0.0, 0.0, 0.0, 1.0]
+- instance_id: table
+  asset_id: arena.supported_ramp_v1
+  position_world_m: [0.0, 0.0, 0.775]
+  quaternion_world_xyzw: [0.0, 0.0, 0.0, 1.0]
+geometry:
+  support_surface_z_m: 0.8
+  ramp_angle_rad:
+    degrees: {min: 5.0, max: 15.0}
+  ramp_downstream_lip_world_m: [0, -0.06, 0.808]
+  ramp_half_size_m: [0.105, 0.17, 0.004]
+  capture_region_bounds_world_m:
+  - [-0.12, -0.03, 0.8]
+  - [0.12, 0.17, 1.2]
+  exit_region_bounds_xy_m:
+  - [-0.135, 0.2]
+  - [0.135, 0.24]
+motion: []
+physics:
+  gravity_world_m_s2: [0.0, 0.0, -9.81]
+  bodies:
+  - entity_id: target
+    mass_kg: 0.10097330116049881
+    diagonal_inertia_kg_m2: [8.269713365044852e-05, 8.269713365044852e-05, 2.908031073422366e-05]
+  contacts:
+  - entity_id: target
+    friction_slide_spin_roll:
+    - {min: 0.25, max: 0.45}
+    - 0.005
+    - 0.0001
+    solref: [0.02, 1.0]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2.0]
+  - entity_id: ramp
+    friction_slide_spin_roll: {from_entity_id: target}
+    solref: [0.02, 1.0]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2.0]
+  - entity_id: gate
+    friction_slide_spin_roll: [0.35, 0.005, 0.0001]
+    solref: [0.02, 1.0]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2.0]
+  - entity_id: table
+    friction_slide_spin_roll:
+    - {min: 0.09, max: 0.15}
+    - 0.005
+    - 0.0001
+    solref: [0.02, 1.0]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2.0]
+  joints: []
+cameras:
+  image_height_px: 224
+  image_width_px: 224
+  views:
+  - view_name: agentview
+    position_parent_m: [0.68, -0.58, 1.62]
+    quaternion_parent_xyzw: [0.38402708798262114, 0.178438700438381, 0.38173834046499744, 0.8215586803755892]
+    vertical_fov_deg: 40.0
+lighting:
+  lights:
+  - light_id: free_dynamics_key
+    position_world_m: [1.0, 1.0, 1.5]
+    direction_world: [-0.19245008972987526, -0.19245008972987526, -0.9622504486493763]
+    ambient_rgb: [0.0, 0.0, 0.0]
+    diffuse_rgb: [0.7, 0.7, 0.7]
+    specular_rgb: [0.3, 0.3, 0.3]
+    attenuation: [1.0, 0.0, 0.0]
+    cutoff_deg: 45.0
+    active: true
+events:
+- event_id: release_gate
+  trigger: {type: time, control_tick: 0}
+  effect:
+    type: release_gate_retraction
+    gate_entity_id: gate
+    parked_position_world_m: [0.0, -0.25, 0.55]
+preparation_object_states:
+- instance_id: target
+  asset_id: obj.can_v1
+  position_world_m:
+  - {min: -0.03, max: 0.03}
+  - {min: -0.03, max: 0.03}
+  - 0.8340000000000001
+  quaternion_world_xyzw:
+    yaw_rad: {min: 0.0, max: 6.283185307179586}
+  linear_velocity_world_m_s: [0.0, 0.0, 0.0]
+  angular_velocity_world_rad_s: [0.0, 0.0, 0.0]

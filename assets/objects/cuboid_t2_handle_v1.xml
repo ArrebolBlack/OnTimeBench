@@ -1,0 +1,19 @@
+<mujoco model="cuboid_t2_handle_v1">
+  <asset>
+    <texture type="cube" name="cube_redwood" file="../textures/red-wood.png" />
+    <material texrepeat="1 1" specular="0.4" shininess="0.1" name="cube_redwood_mat" texture="cube_redwood" />
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom rgba="0.5 0 0 1" density="700.0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001" type="box" size="0.022 0.022 0.022" pos="0 0 0" group="0" name="body_collision" />
+        <geom conaffinity="0" contype="0" mass="1e-8" material="cube_redwood_mat" type="box" size="0.022 0.022 0.022" pos="0 0 0" group="1" name="body_visual" />
+        <geom density="700.0" friction="1.0 0.005 0.0001" rgba="0.7 0.12 0.06 1.0" type="box" size="0.008 0.008 0.03" pos="0.0 0.0 0.052" group="0" name="handle_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.86 0.2 0.08 1.0" type="box" size="0.008 0.008 0.03" pos="0.0 0.0 0.052" group="1" name="handle_visual" />
+      </body>
+      <site name="bottom_site" pos="0 0 -0.022" size=".001" rgba="0 0 0 0" />
+      <site name="top_site" pos="0 0 0.082" size=".001" rgba="0 0 0 0" />
+      <site name="horizontal_radius_site" pos="0.03111269837220809 0.022 0" size=".001" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

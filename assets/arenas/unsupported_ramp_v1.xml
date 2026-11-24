@@ -1,0 +1,34 @@
+<mujoco model="unsupported_ramp_v1">
+  <compiler angle="radian" />
+  <worldbody>
+    <body pos="0 0 0" name="ramp">
+      <geom friction="0.8 0.005 0.0001" rgba="0.18 0.24 0.3 1.0" type="box" size="0.12 0.2 0.01" pos="0.0 0.0 -0.01" group="0" name="ramp_collision" />
+      <geom contype="0" conaffinity="0" rgba="0.18 0.24 0.3 1.0" type="box" size="0.12 0.2 0.01" pos="0.0 0.0 -0.01" group="1" name="ramp_visual" />
+      <!-- OnTimeBench changes support geom sizes at reset, retaining their compiled template inertia. -->
+      <body pos="0 0 0" name="ramp_support_0">
+        <inertial pos="0 0 0" mass="0.008000000000000002" diaginertia="5.333333333333336e-7 5.333333333333336e-7 5.333333333333336e-7" />
+        <geom friction="0.8 0.005 0.0001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="0" name="ramp_support_0_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.38 0.42 0.46 1.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="1" name="ramp_support_0_visual" />
+      </body>
+      <body pos="0 0 0" name="ramp_support_1">
+        <inertial pos="0 0 0" mass="0.008000000000000002" diaginertia="5.333333333333336e-7 5.333333333333336e-7 5.333333333333336e-7" />
+        <geom friction="0.8 0.005 0.0001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="0" name="ramp_support_1_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.38 0.42 0.46 1.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="1" name="ramp_support_1_visual" />
+      </body>
+      <body pos="0 0 0" name="ramp_support_2">
+        <inertial pos="0 0 0" mass="0.008000000000000002" diaginertia="5.333333333333336e-7 5.333333333333336e-7 5.333333333333336e-7" />
+        <geom friction="0.8 0.005 0.0001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="0" name="ramp_support_2_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.38 0.42 0.46 1.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="1" name="ramp_support_2_visual" />
+      </body>
+      <body pos="0 0 0" name="ramp_support_3">
+        <inertial pos="0 0 0" mass="0.008000000000000002" diaginertia="5.333333333333336e-7 5.333333333333336e-7 5.333333333333336e-7" />
+        <geom friction="0.8 0.005 0.0001" rgba="0.0 0.0 0.0 0.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="0" name="ramp_support_3_collision" />
+        <geom contype="0" conaffinity="0" rgba="0.38 0.42 0.46 1.0" type="box" size="0.01 0.01 0.01" pos="0 0 0" group="1" name="ramp_support_3_visual" />
+      </body>
+    </body>
+    <body pos="0 0 0" name="gate">
+      <geom friction="0.8 0.005 0.0001" rgba="0.7 0.22 0.08 1.0" type="box" size="0.105 0.004 0.035" pos="0 0 0" group="0" name="gate_collision" />
+      <geom contype="0" conaffinity="0" rgba="0.92 0.32 0.1 1.0" type="box" size="0.105 0.004 0.035" pos="0 0 0" group="1" name="gate_visual" />
+    </body>
+  </worldbody>
+</mujoco>

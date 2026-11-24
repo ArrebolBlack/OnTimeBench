@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ontimebench"
+version = "0.1.0"
+description = "OnTimeBench: dynamic manipulation at native policy latency"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = [
+  "LICENSE",
+  "LICENSE-DATA.txt",
+  "THIRD_PARTY_NOTICES.md",
+  "assets/textures/robosuite/LICENSE",
+  "assets/textures/robosuite/AUTHORS",
+]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "h5py==3.16.0",
+  "mujoco==3.11.0",
+  "numpy>=1.26.4,<2.0",
+  "PyYAML>=6.0",
+  "robosuite==1.5.2",
+  "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.14",
+  "ruff>=0.9",
+  "types-PyYAML",
+]
+
+[project.scripts]
+ontimebench-generate-scenarios = "ontimebench.cli.generate_scenarios:main"
+ontimebench-evaluate = "ontimebench.cli.evaluate:main"
+ontimebench-merge = "ontimebench.cli.merge:main"
+ontimebench-record = "ontimebench.cli.record:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ontimebench"]
+dev-mode-dirs = ["src"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"assets" = "ontimebench/assets"
+"configs" = "ontimebench/configs"
+"manifests" = "ontimebench/manifests"
+
+[tool.hatch.build.targets.sdist]
+include = ["/src/ontimebench", "/assets", "/configs", "/manifests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+strict = true
+packages = ["ontimebench"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["mujoco", "mujoco.*", "robosuite", "robosuite.*", "scipy.spatial.transform"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["h5py", "h5py.*"]
+follow_untyped_imports = true
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = ["robosuite.wrappers.wrapper"]
+follow_untyped_imports = true

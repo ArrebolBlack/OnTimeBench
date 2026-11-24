@@ -1,0 +1,25 @@
+schema_version: 1
+variant: phase
+bindings:
+  wand_object_id: wand
+  wire_fixture_id: wire
+  cradle_fixture_ids: []
+allowed_observation_profiles:
+  - agentview
+  - agentview_wrist
+allowed_action_modes:
+  - E7
+  - J8
+episode_horizon_steps: 420
+success:
+  phase_alignment_distance_m: 0.090
+  loop_entry_distance_m: 0.030
+  path_progress_threshold: 0.60
+  terminal_progress_threshold: 0.85
+  terminal_distance_m: 0.055
+metrics:
+  - success_rate
+  - task_completion
+  - completion_time_s
+  - safety_failure_rate
+  - failure_rate
