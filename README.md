@@ -15,7 +15,7 @@
   Yue Deng<sup>1,†</sup>&nbsp;&nbsp;
   Tiejun Huang<sup>2,†</sup>
   <br>
-  <sup>1</sup>Beijing Zhongguancun Academy&nbsp;&nbsp;
+  <sup>1</sup>Zhongguancun Academy&nbsp;&nbsp;
   <sup>2</sup>Peking University&nbsp;&nbsp;
   <sup>3</sup>Beijing Academy of Artificial Intelligence
   <br>
