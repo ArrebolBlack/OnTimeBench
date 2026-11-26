@@ -24,7 +24,7 @@
 
 <p align="center">
   <a href="https://foveawam.github.io"><img src="https://img.shields.io/badge/Project%20Page-FOVEAWAM.GITHUB.IO-blue?style=flat&logo=github" alt="Project Page"></a>
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-red?style=flat&logo=arxiv" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2611.31705"><img src="https://img.shields.io/badge/arXiv-2611.31705-red?style=flat&logo=arxiv" alt="arXiv"></a>
   <a href="https://huggingface.co/datasets/JiaqiYin/OnTimeBench"><img src="https://img.shields.io/badge/HuggingFace-Dataset-orange?style=flat&logo=huggingface" alt="Hugging Face"></a>
 </p>
 
@@ -190,11 +190,14 @@ OnTimeBench is built on [MuJoCo](https://github.com/google-deepmind/mujoco) and 
 
 ```bibtex
 @misc{yin2026foveawam,
-  title  = {{FoveaWAM}: Role-Aware {4D} World--Action Modeling for Dynamic Manipulation},
+  title = {{FoveaWAM}: Role-Aware {4D} World-Action Modeling for Dynamic Manipulation},
   author = {Yin, Jiaqi and Zhang, Baoyue and Zhang, Jiyuan and Liu, Wenxuan and
             Yu, Zhaofei and Deng, Yue and Huang, Tiejun},
-  year   = {2026},
-  url    = {https://foveawam.github.io}
+  year = {2026},
+  eprint = {2611.31705},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2611.31705}
 }
 ```
 
